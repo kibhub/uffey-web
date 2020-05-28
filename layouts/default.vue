@@ -1,9 +1,10 @@
 <template>
-  <app>
-    <v-app-bar>
-      <nuxt />
-    </v-app-bar>
-  </app>
+  <v-app>
+    <v-app-bar color="primary"></v-app-bar>
+    <v-content>
+      <nuxt></nuxt>
+    </v-content>
+  </v-app>
 </template>
 
 <style>

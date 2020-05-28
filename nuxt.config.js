@@ -1,22 +1,20 @@
 import pkg from './package'
 
 export default {
-  mode: 'universal',
+  mode : 'universal',
 
   /*
    ** Headers of the page
    */
-  head: {
+  head : {
     title: pkg.name,
     meta: [
       {
         charset: 'utf-8'
-      },
-      {
+      }, {
         name: 'viewport',
         content: 'width=device-width, initial-scale=1'
-      },
-      {
+      }, {
         hid: 'description',
         name: 'description',
         content: pkg.description
@@ -30,13 +28,12 @@ export default {
       }
     ]
   },
-  buildModules: ['@nuxtjs/vuetify'],
-  vuetify: {
+  buildModules : ['@nuxtjs/vuetify'],
+  vuetify : {
     theme: {
-      dark: true,
       themes: {
         light: {
-          primary: '#2196f3',
+          primary: '#cccdfc',
           secondary: '#03a9f4',
           accent: '#00bcd4',
           error: '#009688',
@@ -50,41 +47,39 @@ export default {
   /*
    ** Customize the progress-bar color
    */
-  loading: {
+  loading : {
     color: '#fff'
   },
 
   /*
    ** Global CSS
    */
-  css: [],
+  css : [],
 
   /*
    ** Plugins to load before mounting the App
    */
-  plugins: [],
+  plugins : [],
 
   /*
    ** Nuxt.js modules
    */
-  modules: ['@nuxtjs/pwa'],
+  modules : ['@nuxtjs/pwa'],
 
   /*
    ** Build configuration
    */
-  build: {
+  build : {
     /*
      ** You can extend webpack config here
      */
     extend(config, ctx) {
       // Run ESLint on save
       if (ctx.isDev && ctx.isClient) {
-        config.module.rules.push({
-          enforce: 'pre',
-          test: /\.(js|vue)$/,
-          loader: 'eslint-loader',
-          exclude: /(node_modules)/
-        })
+        config
+          .module
+          .rules
+          .push({enforce: 'pre', test: /\.(js|vue)$/, loader: 'eslint-loader', exclude: /(node_modules)/})
       }
     }
   }
