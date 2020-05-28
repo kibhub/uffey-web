@@ -1,8 +1,5 @@
 {
-  "name": "uffey-web",
   "version": "1.0.0",
-  "description": "Uffey Web app",
-  "author": "Kbrom Hailay",
   "private": true,
   "scripts": {
     "dev": "nuxt",
